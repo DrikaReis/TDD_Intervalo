@@ -9,6 +9,9 @@ class Intervalo
         if(sizeof($lista) > 0)
         {
             return true;
+        } else
+        {
+            return false;
         }
     }
 

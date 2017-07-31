@@ -17,12 +17,20 @@ class ExampleTest extends TestCase
         $this->assertTrue($result);
     }
 
-    // case 2 - lista <= 0 (true)
+    // case 2 - lista <= 0 (false)
     public function testCase2()
     {
         $lista = [];
         $result = Intervalo::intervalo($lista);
         $this->assertFalse($result);
+    }
+
+    // case 3 - lista.type == int (true)
+    public function testCase3()
+    {
+        $lista = [10, 11, 12, 20, 21, 22];
+        $result = Intervalo::intervalo($lista);
+        $this->assertContainsOnly('array', $result);
     }
 
 }
