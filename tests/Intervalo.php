@@ -36,7 +36,10 @@ class Intervalo
                           array_push($arrayTemp, $temp);
                         }
                     }
-                } 
+                } else
+                {
+                    return false;
+                }
             }
             return $arrayRetorno;
         } else {
