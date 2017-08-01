@@ -14,7 +14,7 @@ class ExampleTest extends TestCase
     {
         $lista = [10, 11, 12, 20, 21, 22];
         $result = Intervalo::intervalo($lista);
-        $this->assertTrue($result);
+        $this->assertTrue(sizeof($result)>0);
     }
 
     // case 2 - lista <= 0 (false)
