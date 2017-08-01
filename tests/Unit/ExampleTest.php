@@ -33,4 +33,12 @@ class ExampleTest extends TestCase
         $this->assertContainsOnly('array', $result);
     }
 
+    // case 4 - lista.type != int (false)
+    public function testCase4()
+    {
+        $lista = ["10", "11", "12", "20", "21", "22"];
+        $result = Intervalo::intervalo($lista);
+        $this->assertFalse($result);
+    }
+
 }
